@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EmpAI – Anonymous AI Chatbot</title>
+  <title>EmpAI Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Welcome to EmpAI</h1>
-  <p>Your anonymous AI mental health assistant</p>
+  <h1>Welcome to EmpAI!</h1>
+  <p>Your anonymous AI chatbot for emotional support.</p>
 
+  <!-- IBM Watson Assistant Chat Script -->
   <script>
     window.watsonAssistantChatOptions = {
-      integrationID: "70229895-173a-47fc-8771-ed4a678e216f", // Your integration ID
-      region: "au-syd", // Your region
-      serviceInstanceID: "9b21bcf6-a44d-44e8-9e27-ea904f56a265", // Your service instance ID
+      integrationID: "70229895-173a-47fc-8771-ed4a678e216f", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "9b21bcf6-a44d-44e8-9e27-ea904f56a265", // The ID of your service instance.
       onLoad: async (instance) => { await instance.render(); }
     };
     setTimeout(function(){
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
-               (window.watsonAssistantChatOptions.clientVersion || 'latest') +
-               "/WatsonAssistantChatEntry.js";
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
