@@ -2,19 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EmpAI Chatbot</title>
+  <title>EmpAI - Your Anonymous Mental Health Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Modern Look -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f6f8fa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 600px;
+      margin: 80px auto 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 40px 24px 40px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5em;
+      color: #222a68;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #3c4c7b;
+      margin-bottom: 1.5em;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2em;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 1.2em;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.98rem;
+      color: #888;
+      background: #f1f3f9;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 8px;
+        margin-top: 40px;
+      }
+      h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to EmpAI!</h1>
-  <p>Your anonymous AI chatbot for emotional support.</p>
+  <div class="container">
+    <!-- Optional logo -->
+    <!-- <img src="logo.png" alt="EmpAI logo" class="logo" /> -->
+    <h1>Welcome to EmpAI</h1>
+    <h2>Your anonymous AI mental health assistant</h2>
+    <div class="tagline">
+      Confidential support for young people facing emotional stress.<br>
+      <b>No login required.</b> Your privacy is our top priority.
+    </div>
+    <!-- You can add a CTA button here if you want, e.g. "Chat Now" -->
+  </div>
 
-  <!-- IBM Watson Assistant Chat Script -->
+  <!-- IBM Watson Assistant Integration -->
   <script>
     window.watsonAssistantChatOptions = {
-      integrationID: "70229895-173a-47fc-8771-ed4a678e216f", // The ID of this integration.
-      region: "au-syd", // The region your integration is hosted in.
-      serviceInstanceID: "9b21bcf6-a44d-44e8-9e27-ea904f56a265", // The ID of your service instance.
+      integrationID: "70229895-173a-47fc-8771-ed4a678e216f",
+      region: "au-syd",
+      serviceInstanceID: "9b21bcf6-a44d-44e8-9e27-ea904f56a265",
       onLoad: async (instance) => { await instance.render(); }
     };
     setTimeout(function(){
@@ -23,5 +87,8 @@
       document.head.appendChild(t);
     });
   </script>
+  <footer>
+    &copy; 2025 EmpAI. Built with ❤️ for mental wellness.
+  </footer>
 </body>
 </html>
